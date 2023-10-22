@@ -1,0 +1,63 @@
+﻿@model Lab7.Models.FileDownloadModel
+
+<style>
+    body {
+        background-color: #FFB6C1;
+        color: white;
+        margin: 0; /* Видалення зовнішнього відступу */
+    }
+
+    .form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0; /* Однаковий відступ між елементами форми */
+        border: 1px solid #FFB6C1;
+        border-radius: 5px;
+        font-weight: bold; /* Зробити текст більш жирним */
+    }
+
+    .btn-primary {
+        background-color: #FFB6C1;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+
+<div class="form-wrapper">
+    <form method="post">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fileName">File Name:</label>
+            <input type="text" id="fileName" name="fileName" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Continue</button>
+    </form>
+</div>
