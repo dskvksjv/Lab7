@@ -18,8 +18,6 @@ namespace Lab7.Controllers
             string content = $"First Name: {model.FirstName}\nLast Name: {model.LastName}";
 
             byte[] bytes = Encoding.ASCII.GetBytes(content);
-
-            // Використовуйте назву файлу з моделі або за замовчуванням, якщо вона не вказана
             string fileName = string.IsNullOrEmpty(model.FileName) ? "default.txt" : $"{model.FileName}.txt";
 
             return File(bytes, "text/plain", fileName);
